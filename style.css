@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+   
+}
+
+body {
+    width: 100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    background: linear-gradient(45deg,#363333,#192c48);
+    background-image: url(greentexture.jpg);
+}
+
+.calculator
+{  
+   display:gird;
+   position: relative;
+   overflow: hidden;
+   height:500px;
+   width: 380px;
+   border: 1px solid whitesmoke;
+   padding: 20px;
+   border-radius: 16px;
+   background: linear-gradient(33deg,#1a611064,#1e2923c1,rgba(30, 148, 167, 0.339));
+   align-items: center;
+   box-shadow: 0px 3px 9px rgba(7, 170, 10, 0.732);
+}
+
+
+input{
+    color: whitesmoke;
+    width: 320px;
+    border: none ;
+    padding: 24px ;
+    margin: 16px;
+    background: transparent;
+    font-size: 36px;
+    letter-spacing: 3px;
+    text-align: right;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+input::placeholder{
+ color: rgba(173, 192, 176, 0.91);
+ background: transparent;
+ box-shadow:  .5px .5px rgb(29, 122, 56);
+}
+
+.allbutton{
+ text-align: center;
+}
+
+button{
+    border: solid rgb(0, 0, 0);
+    margin: 4px;
+    height:55px;
+    width: 70px;
+    font-size: 24px;
+    align-items: center;
+    border-radius: 33%;
+    color: #61940ec7;
+    background: transparent;
+    box-shadow: 1px 0.5px 0.3px rgb(27, 28, 28);
+    text-shadow:  4px 4px #030403cf;
+    cursor: pointer;
+    text-align: center;
+}
+
+.del_b{
+    color: #a3c129;
+}
+.ac_b{
+    color: #ff0000d3;
+}
+
+.oparetor{
+    font-size: 33px;
+    font-weight:900;
+    color:#61940ec7;
+    text-shadow: 0px 3px 1px rgb(0, 0, 0) ;
+}
+/* p{
+    text-align: center;
+    color: rgba(53, 162, 22, 0.233);
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(22, 112, 19, 0.231);
+    box-shadow: 1px 1px 3px rgb(141, 176, 13), 
+} */
+
+
+
+p {
+    position: absolute;
+    
+    color: rgba(53, 162, 22, 0.233);
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(22, 112, 19, 0.231);
+    box-shadow: 1px 1px 3px rgb(141, 176, 13);
+
+    /* Set initial position and hide overflow */
+    overflow: hidden;
+    white-space: nowrap;
+
+    /* Animation properties */
+    animation: moveLeftRight 5s infinite alternate; /* Adjust the duration and other properties as needed */
+}
+
+@keyframes moveLeftRight {
+    0% {
+        transform: translateX(40px);
+    }
+    100% {
+        transform: translateX(95%); /* Adjusting the distance based needs */
+    }
+}
+
+
+p:hover {
+    font-weight: 200;
+    color: rgba(65, 241, 16, 0.567);
+    border-bottom: 1px solid rgba(6, 11, 6, 0.231);
+    box-shadow: 1px 1px 3px rgba(6, 93, 254, 0.794);
+}
+
+
+input:hover::placeholder{
+    border: none;
+    color: rgb(32, 161, 43);
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.849);
+    border: none;
+}
+input:focus{
+    border: none;
+    outline: none;
+    color:white;
+    cursor:text;
+}
+
+
+button:active{
+    color: white;
+    background:black;
+    box-shadow: 2px 2px 5px rgb(247, 247, 247);
+}
+.ac_b:active{ 
+    color: rgb(244, 253, 3);
+    background: rgba(6, 6, 6, 0.727);
+    box-shadow: 2px 2px 2px rgb(252, 0, 0);
+}
+.del_b:active{
+    color: white;
+    background: rgba(6, 6, 6, 0.727);
+    box-shadow: 2px 2px 3px rgb(232, 252, 7);
+}
+.oparetor:active{
+    color: rgb(236, 6, 6);
+    font-weight: 600;
+}
+
+
+
+@media only screen and (max-width: 420px) {
+    body {
+        margin: 0;
+        background-image:url(greentexture.jpg);
+         /* Remove background image on mobile */
+    }
+
+    .calculator {
+        padding-top: 40px;
+        width: 100%; /* Make the calculator full width on mobile */
+        height: 100%; /* Allow the height to adjust based on content */
+    }
+
+    input {
+        color: white;
+        padding-top: 50px;
+        overflow: visible;
+        height: 40px;
+        width: 310px; /* Make the input full width on mobile */
+         /* Adjust padding for smaller screens */
+        font-size: 36px; /* Adjust font size for smaller screens */
+        margin-bottom: 90px;
+        box-shadow:  .5px .5px rgb(29, 122, 56);
+    }
+   
+    button {
+    border: solid rgb(162, 13, 122);
+    margin: 4px;
+    height:80px;
+    width:80px;
+    font-size:36px;
+    align-items: center;
+    border-radius: 33%;
+    color: #61940ec7;
+    background: transparent;
+    box-shadow: 1px 0.5px 0.3px rgb(27, 28, 28);
+    text-shadow:  4px 4px #030403cf;
+    cursor: pointer;
+    text-align: center;
+    }
+     
+
+    p {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+    .del_b ,.ac_b,.oparetor{
+         
+         width: 80px;
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    body {
+        margin: 0;
+        background-image:url(greentexture.jpg);
+         /* Remove background image on mobile */
+    }
+
+    .calculator {
+        width: 100%; /* Make the calculator full width on mobile */
+        height: 100%; /* Allow the height to adjust based on content */
+    }
+
+    input {
+        margin-top:50px;
+        height: 30px;
+        width: 300px; /* Make the input full width on mobile */
+         /* Adjust padding for smaller screens */
+        font-size: 26px; /* Adjust font size for smaller screens */
+    }
+   
+    button {
+    border: solid rgb(0, 0, 0);
+    margin: 1px;
+    height:80px;
+    width:70px;
+    font-size:14px;
+    align-items: center;
+    border-radius: 33%;
+    color: #61940ec7;
+    background: transparent;
+    box-shadow: 1px 0.5px 0.3px rgb(27, 28, 28);
+    text-shadow:  4px 4px #030403cf;
+    cursor: pointer;
+    text-align: center;
+    }
+     
+
+    p {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+    .del_b ,.ac_b,.oparetor{
+         font-size: medium;
+         width: 70px;
+    }
+}
